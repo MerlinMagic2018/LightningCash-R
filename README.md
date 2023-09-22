@@ -1,3 +1,5 @@
+LightningCash Reborn !!
+
 
 # LightningCashr Core integration/staging tree
 ===========================================
@@ -8,36 +10,29 @@ README.md Updated on September 22 2023
 What is LightningCashr ?
 ----------------------
 
-LightningCashr is a coin based on Lightning-Cash ( LNCR ),with Yespower POW algorithm, including DarkGravityWave ( difficulty changes for every block ) and possible CURRENT block difficulty change over time to protect against high network hash variation and long stale tip. It is also 15 times faster than LitecoinCash. For full details, please visit our website at https://coin.lightningcashr.org
+LightningCashr is a coin based on Lightning-Cash ( LNC ),with Yespower POW algorithm, including DarkGravityWave ( difficulty changes for every block ) and possible CURRENT block difficulty change over time to protect against high network hash variation and long stale tip. It is also 15 times faster than LitecoinCash. For full details, please visit our website at https://lightningcashr.org
+
+A snapshot of the old LightningCash's chain has been made on September 20th 2023, and all old balances can be claimed in the new LightningCash-Reborn wallet !!
 
 Compiled binary releases are available here on Github.
 Whitepapers will be available soon.
 
-Current supported version are 1.1.0
+Current supported version : 1.0.0
 
 LightningCashr Core is the full node software that makes up the backbone of the LightningCashr p2p network.
 
 
-Website : https://coin.lightningcashr.org
+Website : https://lightningcashr.org
 
 Pool : https://pool.lightningcashr.org
 
-Block Explorer : https://explorer.lightningcashr.org
-
-Discord Server : https://discord.gg/
-
-
-Exchanges : 
- 
-
-
-Integration under way : 
+Block Explorer : https://explorer.lightningcashr.orgad
 
 
 
 Any OS build instructions :
 
-https://github.com/diabaths/LightningCashr-Coin/blob/master/doc/build-ALL-OS.md
+https://github.com/MerlinMagic2018/LightningCash-R/blob/master/doc/build-ALL-OS.md
 
 
 
@@ -51,7 +46,7 @@ LightningCashr Characteristics
 ( With the addition of modified Dash's DarkGravityWave v3 algorithm, that changes difficulty every block, and progressively lowers difficulty if long stale tips happens. Tested and fully working !!) ---> check DarkGravity V3 (https://github.com/dashpay/dash/blob/master/src/pow.cpp#L82) (By Evan Duffield)
  <evan@dash.org>
 
-And modifications from LighningCashDev made here :        https://github.com/diabaths/LightningCashr-Coin/blob/master/src/pow.cpp#L110
+And modifications from LighningCashDev made here :        https://github.com/MerlinMagic2018/LightningCash-R/blob/master/src/pow.cpp#L110
 
 ( Difficulty adjusted every block and possibly in CURRENT block if a long network stale tip happens !! This protects LightningCashr from high hash variations and " high hash attacks " , that happens frequently for new coins and kills them by making the mining difficulty too high for the " normal " network's hash rate. )
 
@@ -80,8 +75,6 @@ The Hive Characteristics
 
 - Target Hive block frequency (1 out of this many blocks should be Hivemined) : 1 Every 2 Blocks 
 
-- Hive 1.1- Activated: June 17, 2023 (more bee lives and more) 
-
 - OPTIONAL to return 10% of bee Creation to community fund( will by used to promote the coin)
 	
 
@@ -95,7 +88,7 @@ information or see https://opensource.org/licenses/MIT.
 
 A copy of this license can be found here :
 
-https://github.com/diabaths/LightningCashr-Coin/blob/master/COPYING
+https://github.com/MerlinMagic2018/LightningCash-R/blob/master/COPYING
 
 
 Development Process

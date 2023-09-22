@@ -172,9 +172,9 @@ public:
         
         // The best chain should have at least this much work.
 
-         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");  // LightningCashr: block 119647
+         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");  // LightningCashr: block 0
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b"); // LightningCashr :  block 118670
+        consensus.defaultAssumeValid = uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b"); // LightningCashr :  block 0
 
 
 
