@@ -145,7 +145,7 @@ public:
         consensus.powLimitHive2 = uint256S("7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");  // Highest (easiest) bee hash target
         consensus.minHiveCheckBlock = 1;              // Don't bother checking below this height for Hive blocks (not used for consensus/validation checks, just efficiency when looking for potential BCTs)
         consensus.hiveTargetAdjustAggression = 30;          // Snap speed for bee hash target adjustment EMA
-        consensus.hiveBlockSpacingTarget = 4;               // Target Hive block frequency (1 out of this many blocks should be Hivemined)
+        consensus.hiveBlockSpacingTarget = 2;               // Target Hive block frequency (1 out of this many blocks should be Hivemined)
         consensus.hiveNonceMarker = 192;                    // Nonce marker for hivemined blocks
 
         // LightningCashr: Hive 1.1-related consensus fields
@@ -159,7 +159,7 @@ public:
         consensus.powSplit2 = 0.000416;                       // Below this Hive difficulty threshold, PoW block chainwork bonus is halved again
         consensus.powSplit12 = 0.005;                        // Below this Hive difficulty threshold, PoW block chainwork bonus is halved
         consensus.powSplit22 = 0.0025;                       // Below this Hive difficulty threshold, PoW block chainwork bonus is halved again
-        consensus.maxConsecutiveHiveBlocks = 4;             // Maximum hive blocks that can occur consecutively before a PoW block is required
+        consensus.maxConsecutiveHiveBlocks = 2;             // Maximum hive blocks that can occur consecutively before a PoW block is required
         consensus.hiveDifficultyWindow = 24;                // How many blocks the SMA averages over in hive difficulty adjust
 
 	consensus.variableBeecost = true;	// need to check 
