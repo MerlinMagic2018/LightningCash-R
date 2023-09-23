@@ -22,11 +22,11 @@ Current supported version : 1.0.0
 LightningCashr Core is the full node software that makes up the backbone of the LightningCashr p2p network.
 
 
-Website : https://lightningcashr.org
+Website : https://lightningcashr.com
 
-Pool : https://pool.lightningcashr.org
+Pool : https://pool.lightningcashr.com
 
-Block Explorer : https://explorer.lightningcashr.orgad
+Block Explorer : https://explorer.lightningcashr.com
 
 
 
