@@ -1,5 +1,5 @@
 LightningCash Reborn !!
-
+LNCR
 
 # LightningCashr Core integration/staging tree
 ===========================================
@@ -13,6 +13,8 @@ What is LightningCashr ?
 LightningCashr is a coin based on Lightning-Cash ( LNC ),with Yespower POW algorithm, including DarkGravityWave ( difficulty changes for every block ) and possible CURRENT block difficulty change over time to protect against high network hash variation and long stale tip. It is also 15 times faster than LitecoinCash. For full details, please visit our website at https://lightningcashr.org
 
 A snapshot of the old LightningCash's chain has been made on September 20th 2023, and all old balances can be claimed in the new LightningCash-Reborn wallet !!
+( except addresses with less than 100 LNC )
+
 
 Compiled binary releases are available here on Github.
 Whitepapers will be available soon.
@@ -22,11 +24,11 @@ Current supported version : 1.0.0
 LightningCashr Core is the full node software that makes up the backbone of the LightningCashr p2p network.
 
 
-Website : https://lightningcashr.com
+Website : http://lightningcashr.org ( under construction )
 
-Pool : https://pool.lightningcashr.com
+Pool : http://pool.lightningcashr.org
 
-Block Explorer : https://explorer.lightningcashr.com
+Block Explorer : http://explorer.lightningcashr.org
 
 
 
