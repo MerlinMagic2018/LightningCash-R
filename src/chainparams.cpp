@@ -114,8 +114,8 @@ public:
 
         // LightningCashr: Hive 1.1: Deployment
         consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_1].bit = 9;
-        consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_1].nStartTime = 1681749846 + 5259486;  // June 17, 2023 
-        consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_1].nTimeout = 1681749846 + 31536000 + 5259486;  // June 16, 2024
+        consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_1].nStartTime = 1695443728;  // September 22, 2023 
+        consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_1].nTimeout = 1695443728 + 31536000 + 5259486;  // September 22, 2024
 
         // LightningCashr: Hive 1.2: Deployment
  //       consensus.vDeployments[Consensus::DEPLOYMENT_HIVE_1_2].bit = 10;
