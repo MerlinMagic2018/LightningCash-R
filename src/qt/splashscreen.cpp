@@ -122,7 +122,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
 
     // LightningCashr: Faster, stronger, better !
     pixPaint.setFont(QFont(font, 15*fontFactor));
-    pixPaint.drawText(302, 180, "One Coin-One Opportunity!");
+    pixPaint.drawText(302, 180, "Faster, stronger, better !");
     
     pixPaint.end();
 
