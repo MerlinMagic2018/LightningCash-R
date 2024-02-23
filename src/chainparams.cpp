@@ -172,9 +172,9 @@ public:
         
         // The best chain should have at least this much work.
 
-         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");  // LightningCashr: block 0
+         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000003cc4b5f216a7");  // LightningCashr: block 1305391
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b"); // LightningCashr :  block 0
+        consensus.defaultAssumeValid = uint256S("0x99bd061f8c1b4a5b18ab76c93b353007d9026822df35c7201b08dde8cc42e5d3"); // LightningCashr :  block 1305391
 
 
 
@@ -223,6 +223,7 @@ public:
         checkpointData = {
             {
                {  0, uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b")},
+               {  1305391, uint256S("0x99bd061f8c1b4a5b18ab76c93b353007d9026822df35c7201b08dde8cc42e5d3")},
             }
         };
 
