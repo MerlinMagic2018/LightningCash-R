@@ -139,6 +139,7 @@ public:
         consensus.hiveCommunityAddress = "CeckYLfkWnViDxKE1R5vLZaarygLrNgUwa";      // Community fund address
         consensus.hiveCommunityAddress2 = "CH5B3qVbJVxVCL5qwmXayEo97Z1Ux3pqSB";
         consensus.communityContribFactor = 10;              // Optionally, donate bct_value/maxCommunityContribFactor to community fund
+        consensus.communityContribFactor2 = 2;              // Optionally, donate bct_value/maxCommunityContribFactor to community fund
         consensus.beeGestationBlocks = 48 * 24;               // The number of blocks for a new bee to mature 48*51
         consensus.beeLifespanBlocks = 48 * 24 * 14;              // The number of blocks a bee lives for after maturation
         consensus.powLimitHive = uint256S("0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");  // Highest (easiest) bee hash target
@@ -224,6 +225,7 @@ public:
             {
                {  0, uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b")},
                {  1305391, uint256S("0x99bd061f8c1b4a5b18ab76c93b353007d9026822df35c7201b08dde8cc42e5d3")},
+               {  3657000, uint256S("0x966f34fec23d771d6a0793396650e64fb1f991c06fbfa046c5928d50884f409b")},
             }
         };
 

@@ -51,7 +51,7 @@ static const bool DEFAULT_WHITELISTRELAY = true;
 /** Default for -whitelistforcerelay. */
 static const bool DEFAULT_WHITELISTFORCERELAY = true;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
-static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 100000 / COIN_SCALE / 10; 	    // LightningCashr: Lowered fees
+static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 10000 / COIN_SCALE / 10; 	    // LightningCashr: Lowered fees again
 //! -maxtxfee default
 static const CAmount DEFAULT_TRANSACTION_MAXFEE = 0.1 * COIN * COIN_SCALE;       	// LightningCashr: Account for coin scale
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
@@ -190,6 +190,7 @@ extern const int nSpeedFork;
 extern const int nAdjustFork;
 extern const int nLightFork;
 extern const int nHiveRepairFork;
+extern const int nContribFork;
 
 /** Block hash whose ancestors we will assume to have valid scripts without checking them. */
 extern uint256 hashAssumeValid;

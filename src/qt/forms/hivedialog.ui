@@ -226,10 +226,13 @@ background-color:white;}</string>
            <string>The community fund works by diverting a portion of the unspendable bee creation fee to the spendable community fund address. This enables us to keep developing LightningCashr Coin.</string>
           </property>
           <property name="text">
-           <string>Send 10% of bee fee to Community Fund (Bee price remains the same and you still get the same number of bees)</string>
+           <string>Send 10% ( will be 50 % from 01/01/2025 ) of bee fee to Community Fund (Bee price remains the same and you still get the same number of bees)</string>
           </property>
           <property name="checked">
            <bool>true</bool>
+          </property>
+          <property name="enabled">
+           <bool>false</bool>
           </property>
          </widget>
         </item>

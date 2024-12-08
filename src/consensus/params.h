@@ -102,6 +102,7 @@ struct Params {
     std::string hiveCommunityAddress;   // Community fund address
     std::string hiveCommunityAddress2;  // New community fund address
     int communityContribFactor;         // Optionally, donate bct_value/maxCommunityContribFactor to community fund
+    int communityContribFactor2;         // Optionally, donate bct_value/maxCommunityContribFactor to community fund
     int beeGestationBlocks;             // The number of blocks for a new bee to mature
     int beeLifespanBlocks;              // The number of blocks a bee lives for after maturation
     uint256 powLimitHive;               // Highest (easiest) bee hash target

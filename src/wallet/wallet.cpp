@@ -3711,7 +3711,10 @@ bool CWallet::CreateBeeTransaction(int beeCount, CWalletTx& wtxNew, CReserveKey&
     scriptPubKeyBCF << OP_RETURN << OP_BEE;
     scriptPubKeyBCF += scriptPubKeyFCA;
     CAmount beeCreationValue = totalBeeCost;
-    CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
+    if (chainActive.Height() >= nContribFork)
+    	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor2);
+    else
+	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
     if(communityContrib)
         beeCreationValue -= donationValue;
     CRecipient recipientBCF = {scriptPubKeyBCF, beeCreationValue, false};
@@ -3871,7 +3874,10 @@ bool CWallet::CreateBeeTransaction2(int beeCount, CWalletTx& wtxNew, CReserveKey
     scriptPubKeyBCF << OP_RETURN << OP_BEE;
     scriptPubKeyBCF += scriptPubKeyFCA;
     CAmount beeCreationValue = totalBeeCost;
-    CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
+    if (chainActive.Height() >= nContribFork)
+    	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor2);
+    else
+	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
     if(communityContrib)
         beeCreationValue -= donationValue;
     CRecipient recipientBCF = {scriptPubKeyBCF, beeCreationValue, false};
@@ -4031,7 +4037,10 @@ bool CWallet::CreateBeeTransaction3(int beeCount, CWalletTx& wtxNew, CReserveKey
     scriptPubKeyBCF << OP_RETURN << OP_BEE;
     scriptPubKeyBCF += scriptPubKeyFCA;
     CAmount beeCreationValue = totalBeeCost;
-    CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
+    if (chainActive.Height() >= nContribFork)
+    	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor2);
+    else
+	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
     if(communityContrib)
         beeCreationValue -= donationValue;
     CRecipient recipientBCF = {scriptPubKeyBCF, beeCreationValue, false};
