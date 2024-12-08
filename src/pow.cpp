@@ -566,10 +566,11 @@ bool GetNetworkHiveInfo(int& immatureBees, int& immatureBCTs, int& matureBees, i
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -694,10 +695,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
                             if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -774,10 +776,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -839,10 +842,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -899,10 +903,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmount = tx->vout[1].nValue;
+				CAmount expectedDonationAmount;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmount != expectedDonationAmount)
                                     continue;
                                 beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -955,10 +960,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1015,10 +1021,11 @@ bool GetNetworkHiveInfo2(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
      			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1192,10 +1199,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1290,10 +1298,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1350,10 +1359,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmount = tx->vout[1].nValue;
+				CAmount expectedDonationAmount;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmount != expectedDonationAmount)
                                     continue;
                                 beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1408,10 +1418,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1464,10 +1475,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1533,10 +1545,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1595,10 +1608,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmountX = tx->vout[1].nValue;
+				CAmount expectedDonationAmountX;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmountX != expectedDonationAmountX)
                                     continue;
                                 beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -1747,10 +1761,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmount = tx->vout[1].nValue;
+				CAmount expectedDonationAmount;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmount != expectedDonationAmount)
                                     continue;
                                 beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1843,10 +1858,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                         if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                             if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                 CAmount donationAmount = tx->vout[1].nValue;
+				CAmount expectedDonationAmount;
 			    	if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                 if (donationAmount != expectedDonationAmount)
                                     continue;
                                 beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1903,10 +1919,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                             if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                                 if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                     CAmount donationAmount = tx->vout[1].nValue;
+				    CAmount expectedDonationAmount;
 			    	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	    else
-					CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                     if (donationAmount != expectedDonationAmount)
                                         continue;
                                     beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -1961,10 +1978,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                             if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                                 if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                     CAmount donationAmountX = tx->vout[1].nValue;
+				    CAmount expectedDonationAmountX;
 			    	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	    else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                     if (donationAmountX != expectedDonationAmountX)
                                         continue;
                                     beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -2017,10 +2035,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                             if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                                 if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                     CAmount donationAmountX = tx->vout[1].nValue;
+				    CAmount expectedDonationAmountX;
 			    	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	    else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                     if (donationAmountX != expectedDonationAmountX)
                                         continue;
                                     beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -2086,10 +2105,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                             if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                                 if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                     CAmount donationAmountX = tx->vout[1].nValue;
+				    CAmount expectedDonationAmountX;
 			    	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	    else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                     if (donationAmountX != expectedDonationAmountX)
                                         continue;
                                     beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -2148,10 +2168,11 @@ bool GetNetworkHiveInfo3(int& immatureBees, int& immatureBCTs, int& matureBees, 
                             if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaidX)) {                 // If it's a BCT, total its bees
                                 if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                                     CAmount donationAmountX = tx->vout[1].nValue;
+				    CAmount expectedDonationAmountX;
 			    	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            		CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            		expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    	    else
-					CAmount expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+					expectedDonationAmountX = (beeFeePaidX + donationAmountX) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                                     if (donationAmountX != expectedDonationAmountX)
                                         continue;
                                     beeFeePaidX += donationAmountX;                                           // Add donation amount back to total paid
@@ -2303,10 +2324,11 @@ LogPrintf("potentialLifespanRewards = %i\n", potentialLifespanRewards);
                     if (tx->IsBCT(consensusParams, scriptPubKeyBCF, &beeFeePaid)) {                 // If it's a BCT, total its bees
                         if (tx->vout.size() > 1 && tx->vout[1].scriptPubKey == scriptPubKeyCF) {    // If it has a community fund contrib...
                             CAmount donationAmount = tx->vout[1].nValue;
+			    CAmount expectedDonationAmount;
 			    if ((chainActive.Tip()->nHeight) >= nContribFork)
-                            	CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+                            	expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 			    else
-				CAmount expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+				expectedDonationAmount = (beeFeePaid + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
                             if (donationAmount != expectedDonationAmount)
                                 continue;
                             beeFeePaid += donationAmount;                                           // Add donation amount back to total paid
@@ -2594,10 +2616,11 @@ bool CheckHiveProof(const CBlock* pblock, const Consensus::Params& consensusPara
             }
 
             // Check for valid donation amount
+	    CAmount expectedDonationAmount;
 	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-            	CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+            	expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 	    else
-		CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+		expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
             if (donationAmount != expectedDonationAmount) {
                 LogPrintf("CheckHiveProof: BCT pays community fund incorrect amount %i (expected %i)\n", donationAmount, expectedDonationAmount);
                 return false;
@@ -2905,10 +2928,11 @@ bool CheckHiveProof2(const CBlock* pblock, const Consensus::Params& consensusPar
             }
 
             // Check for valid donation amount
+	    CAmount expectedDonationAmount;
 	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-            	CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+            	expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 	    else
-		CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+		expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
             if (donationAmount != expectedDonationAmount) {
                 LogPrintf("CheckHiveProof: BCT pays community fund incorrect amount %i (expected %i)\n", donationAmount, expectedDonationAmount);
                 return false;
@@ -3257,10 +3281,11 @@ bool CheckHiveProof3(const CBlock* pblock, const Consensus::Params& consensusPar
             }
 
             // Check for valid donation amount
+	    CAmount expectedDonationAmount;
 	    if ((chainActive.Tip()->nHeight) >= nContribFork)
-            	CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
+            	expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor2;  // ...check for valid donation amount
 	    else
-		CAmount expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
+		expectedDonationAmount = (bctValue + donationAmount) / consensusParams.communityContribFactor;  // ...check for valid donation amount
             if (donationAmount != expectedDonationAmount) {
                 LogPrintf("CheckHiveProof: BCT pays community fund incorrect amount %i (expected %i)\n", donationAmount, expectedDonationAmount);
                 return false;

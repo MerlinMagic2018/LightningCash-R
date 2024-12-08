@@ -226,7 +226,7 @@ const int nSpeedFork = 10; // ???? 310000
 const int nAdjustFork = 20; // 617777 to leave enough time for old bees to die
 const int nLightFork = 20; // 5100000 2 weeks +
 const int nHiveRepairFork = 20; // 6345000 fast 5 days
-const int nContribFork = 3864378; around January 1st 2025
+const int nContribFork = 3864378; // around January 1st 2025
 
 uint256 hashAssumeValid;
 arith_uint256 nMinimumChainWork;

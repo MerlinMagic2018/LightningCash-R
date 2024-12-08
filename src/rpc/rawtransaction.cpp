@@ -572,10 +572,11 @@ UniValue createrawbct(const JSONRPCRequest& request)
     scriptPubKeyBCF << OP_RETURN << OP_BEE;
     scriptPubKeyBCF += scriptPubKeyFCA;
     CAmount beeCreationValue = totalBeeCost;
+    CAmount donationValue;
     if (chainActive.Height() >= nContribFork)
-    	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor2);
+    	donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor2);
     else
-    	CAmount donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
+    	donationValue = (CAmount)(totalBeeCost / consensusParams.communityContribFactor);
     if(communityContrib) {
         beeCreationValue -= donationValue;
     }
