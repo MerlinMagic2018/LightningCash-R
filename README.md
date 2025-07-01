@@ -1,13 +1,13 @@
+<img src="https://i.ibb.co/4ZK5Q9Rt/bitcoin256.png" alt="bitcoin256" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
+
 LightningCash Reborn !!
 LNCR
 
 # LightningCashr Core integration/staging tree
 ===========================================
-LightningCashr Core new release version : 2.0.0
+LightningCashr Core new release version : 2.0.1
 
-MANDATORY WALLET UPGRADE !!! You have until January 1st 2025 to upgrade your wallet.
-
-README.md Updated on December 14th 2024
+README.md Updated on July 1st 2025
 
 What is LightningCashr ?
 ----------------------
@@ -21,7 +21,7 @@ A snapshot of the old LightningCash's chain has been made on September 20th 2023
 Compiled binary releases are available here on Github.
 Whitepapers will be available soon.
 
-Current supported version : 2.0.0
+Current supported version : 2.0.1
 
 LightningCashr Core is the full node software that makes up the backbone of the LightningCashr p2p network.
 
@@ -134,8 +134,7 @@ The Hive Characteristics
 
 - Target Hive block frequency (1 out of this many blocks should be Hivemined) : 1 Every 2 Blocks 
 
-- 10% of bee Creation fee goes to the community fund														
-( it will be 50 % after January 1st 2025, and those funds will be used to promote the coin and list it on new exchanges )
+- 50% of bee Creation fee goes to the community fund, and those funds will be used to promote the coin and list it on new exchanges
 	
 
 

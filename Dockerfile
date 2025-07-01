@@ -18,9 +18,9 @@ RUN apt-get install -y libdb4.8-dev libdb4.8++-dev
 
 RUN apt-get install -y libminiupnpc-dev
 
-RUN git clone https://github.com/diabaths/LightningCashr-Coin
+RUN git clone https://github.com/MerlinMagic2018/LightningCash-R
 
-WORKDIR /LightningCashr-Coin
+WORKDIR /LightningCash-R
 RUN ./autogen.sh
 
 RUN ./configure --without-gui --disable-tests --disable-bench --disable-zmq

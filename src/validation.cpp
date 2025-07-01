@@ -3056,7 +3056,7 @@ static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state,
     }
 
     // Skip headers validation until we're close to chaintip
-      if (nHeight < SKIP_BLOCKHEADER_POW)
+      if (nHeight <= SKIP_BLOCKHEADER_POW)
         return true;
     
     if (nHeight >= nSpeedFork) {

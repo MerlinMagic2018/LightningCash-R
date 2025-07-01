@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2017 The Bitcoin Core developers
-// Copyright (c) 2019-2022 Antoine Brûlé
+// Copyright (c) 2019-2025 Antoine Brûlé
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -173,9 +173,9 @@ public:
         
         // The best chain should have at least this much work.
 
-         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000003cc4b5f216a7");  // LightningCashr: block 1305391
+         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000089fe179b775b");  // LightningCashr: block 5362791
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x99bd061f8c1b4a5b18ab76c93b353007d9026822df35c7201b08dde8cc42e5d3"); // LightningCashr :  block 1305391
+        consensus.defaultAssumeValid = uint256S("0x9e881790e1bb01f8f43fc8f3c49f1ca2f257ddf9f7042800aaa512e475727528"); // LightningCashr :  block 5362791
 
 
 
@@ -226,15 +226,16 @@ public:
                {  0, uint256S("0x35f373b6fed4342ef20327917f756dc5fe76b4f2c111ac0a1c52ba408764709b")},
                {  1305391, uint256S("0x99bd061f8c1b4a5b18ab76c93b353007d9026822df35c7201b08dde8cc42e5d3")},
                {  3657000, uint256S("0x966f34fec23d771d6a0793396650e64fb1f991c06fbfa046c5928d50884f409b")},
+               {  5362791, uint256S("0x9e881790e1bb01f8f43fc8f3c49f1ca2f257ddf9f7042800aaa512e475727528")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data at genesis block.
-            1694548330, // * UNIX timestamp of last known number of transactions
-            0,   // * total number of transactions between genesis and that timestamp
+            1751354596, // * UNIX timestamp of last known number of transactions
+            5626136,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            0.0        // * estimated number of transactions per second after that timestamp
+            0.09991706136773344        // * estimated number of transactions per second after that timestamp
         };
     }
 };
