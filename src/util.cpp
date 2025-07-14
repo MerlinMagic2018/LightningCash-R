@@ -953,13 +953,19 @@ std::string CopyrightHolders(const std::string& strPrefix)
 
 	// LitecoinCash: Add a row
     std::string strFirstPrefix = strPrefix;    
-    strFirstPrefix.replace(strFirstPrefix.find("2011-"), sizeof("2011-")-1, "2022-");        
+    strFirstPrefix.replace(strFirstPrefix.find("2011-"), sizeof("2011-")-1, "2023-");        
     std::string strCopyrightHolders = strFirstPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
         std::string strYear = strPrefix;
+        strYear.replace(strYear.find("2011"), sizeof("2011")-1, "2019");
+        strCopyrightHolders += "\n" + strYear + "merlin (LightningCash)";
+    }
+
+   if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
+        std::string strYear = strPrefix;
         strYear.replace(strYear.find("2011"), sizeof("2011")-1, "2018");
-        strCopyrightHolders += "\n" + strYear + "The LightningCashr devs";
+        strCopyrightHolders += "\n" + strYear + "The LitecoinCash devs";
     }
         
     // Litecoin: Check for untranslated substitution to make sure Litecion Core copyright is not removed by accident

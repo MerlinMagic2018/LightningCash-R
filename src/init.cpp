@@ -526,14 +526,15 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/diabaths/LightningCashr-Coin>";
-    const std::string URL_WEBSITE = "<http://lightningcashr.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/MerlinMagic2018/LightningCash-R>";
+    const std::string URL_WEBSITE = "<https://lightningcash-reborn.space>";
+    const std::string URL_WEBSITE2 = "<https://lightningcashr.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
-                       "Visit %s for further information about the software."),
-               PACKAGE_NAME, URL_WEBSITE) +
+                       "Visit %s or %s for further information about the software."),
+               PACKAGE_NAME, URL_WEBSITE, URL_WEBSITE2) +
            "\n" +
            strprintf(_("The source code is available from %s."),
                URL_SOURCE_CODE) +

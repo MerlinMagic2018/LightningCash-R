@@ -53,7 +53,7 @@ static const bool DEFAULT_WHITELISTFORCERELAY = true;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 10000 / COIN_SCALE / 10; 	    // LightningCashr: Lowered fees again
 //! -maxtxfee default
-static const CAmount DEFAULT_TRANSACTION_MAXFEE = 0.1 * COIN * COIN_SCALE;       	// LightningCashr: Account for coin scale
+static const CAmount DEFAULT_TRANSACTION_MAXFEE = 10 * COIN * COIN_SCALE;       	// LightningCashr: Account for coin scale
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
 static const CAmount HIGH_TX_FEE_PER_KB = 0.01 * COIN * COIN_SCALE;              	// LightningCashr: Account for coin scale
 //! -maxtxfee will warn if called with a higher fee than this amount (in satoshis)
@@ -77,7 +77,7 @@ static const unsigned int BLOCKFILE_CHUNK_SIZE = 0x1000000; // 16 MiB
 /** The pre-allocation chunk size for rev?????.dat files (since 0.8) */
 static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Skip PoW testing headers until this blockheight */
-static const int SKIP_BLOCKHEADER_POW = 5362791; // Skip up to last checkpoint
+static const int SKIP_BLOCKHEADER_POW = 5472830; // Skip up to last checkpoint
 
 
 /** Maximum number of script-checking threads allowed */

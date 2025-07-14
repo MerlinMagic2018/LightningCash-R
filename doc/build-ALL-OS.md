@@ -4,8 +4,10 @@ LightningCashr Build Instructions for any OS
 --------------------------------
 
 
----> Compile from Ubuntu 18.04 ---> Necessary steps for ANY OS :
+---> Compile from Ubuntu 18.04 
+---> Necessary steps for ANY OS :
 
+sudo apt-get update
 
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils curl git wget python3
 
@@ -17,7 +19,7 @@ sudo apt-get install -y libboost-system-dev libboost-filesystem-dev libboost-chr
 
 sudo apt-get install software-properties-common
 
-sudo add-apt-repository -y ppa:luke-jr/bitcoincore
+sudo add-apt-repository -y ppa:bitcoin:bitcoin
 
 sudo apt-get update
 
@@ -37,9 +39,9 @@ Alternatively, to build with Qt 4 (NOT recommended) you need the following:
 
 sudo apt install git
 
-git clone https://github.com/diabaths/LightningCashr-Coin
+git clone https://github.com/MerlinMagic2018/LightningCash-R
 
-cd LightningCashr-Coin
+cd LightningCash-R
 
 
 -------------------------------------------------------------------------
@@ -93,13 +95,13 @@ sudo apt-get install git
 
 sudo apt-get install curl
 
-git clone https://github.com/diabaths/LightningCashr-Coin
+git clone https://github.com/MerlinMagic2018/LightningCash-R
 
-sudo chmod -R a+rw LightningCashr-Coin
+sudo chmod -R a+rw LightningCash-R
 
 PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
 
-cd LightningCashr-Coin
+cd LightningCash-R
 
 cd depends
 
@@ -123,7 +125,7 @@ daemon, cli and tx in src folder, GUI ( qt ) in src/qt folder.
 
 ---------------------------------------------------------------------------
 
-OSX ( Apple )
+## Building for OSX ( Apple )
 ----------
 
 sudo apt-get update
@@ -147,9 +149,9 @@ sudo apt install libbz2-dev
 
 
 
-git clone https://github.com/diabaths/LightningCashr-Coin
+git clone https://github.com/MerlinMagic2018/LightningCash-R
 
-cd LightningCashr-Coin
+cd LightningCash-R
 
 cd depends
 
@@ -183,26 +185,16 @@ lightningcashrd, lightningcashr-cli and lightningcashr-tx are in src folder, GUI
 
 make deploy
 
-# Installation into user directories (optional):
-
-sudo make install
-
-    or
-
-sudo cd ~/LightningCashr-Coin/src
-sudo cp lightningcashrd /usr/local/bin/
-sudo cp lightningcashr-cli /usr/local/bin/
-
 --------------------------------------------------------------------------
 
-Linux ( linux-gnu, usable on ANY linux ):
+## Building for Linux ( linux-gnu, usable on ANY linux distribution ):
 ------
 
 sudo apt-get update
 
-git clone https://github.com/diabaths/LightningCashr-Coin
+git clone https://github.com/MerlinMagic2018/LightningCash-R
 
-cd LightningCashr-Coin
+cd LightningCash-R
 
 cd depends
 
@@ -222,6 +214,8 @@ Done.
 
 Binaries in depends/x86_64-pc-linux-gnu/bin/
 
-You need both the "bin" and the "lib" folders, together in a folder, for the binaries to work.
+Librairies in depends/x86_64-pc-linux-gnu/lib/
+
+You need both the "bin" and the "lib" folders, together in a folder, for the binaries to work !
 
 ----------------------------------------------------------------------------
