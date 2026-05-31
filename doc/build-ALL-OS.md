@@ -19,7 +19,7 @@ sudo apt-get install -y libboost-system-dev libboost-filesystem-dev libboost-chr
 
 sudo apt-get install software-properties-common
 
-sudo add-apt-repository -y ppa:bitcoin:bitcoin
+sudo add-apt-repository ppa:luke-jr/db48
 
 sudo apt-get update
 
